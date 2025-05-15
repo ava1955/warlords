@@ -22,11 +22,11 @@ campaign::province::province(const string& colour, const string& name) {
 [[nodiscard]] const string& campaign::province::getname() const {
     return name;
 }
-void campaign::province::setcolour(const string&  colour) {
-    this->colour = colour;
+void campaign::province::setcolour(const string& _colour) {
+    this->colour = _colour;
 }
-void campaign::province::addcolour(const string&  colour) {
-    this->colour = colour+this->colour;
+void campaign::province::addcolour(const string&  _colour) {
+    this->colour = _colour+this->colour;
 }
 
     const vector <campaign::province*>& campaign::getprovinces() {

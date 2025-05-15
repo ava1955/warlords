@@ -10,8 +10,8 @@ class campaign {
         province(const string& colour, const string& name);
         [[nodiscard]] const string& getcolour() const;
         [[nodiscard]] const string& getname() const;
-        void setcolour(const string& colour);
-        void addcolour(const string& colour);
+        void setcolour(const string& _colour);
+        void addcolour(const string& _colour);
     }Battakka=province(CYAN, "Battakka"),
      Chan=province(MAGENTA, "Chan"),
      Vorth=province(RED, "Vorth"),

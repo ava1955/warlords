@@ -49,14 +49,14 @@
         this->setspeed(this->max_speed);
         return -1;
     }
-    void unit::movement(game &G, int x, int y, char race, char player, vector <unit*> &v, int i) {
+    void unit::movement(game &G, int _x, int _y, char race, char player, vector <unit*> &v, int i) {
         if (player=='R') {
             if (v[i]->getY()<mv_speed){
                 G.setscore(-1);
                 delete v[i];
                 v[i]=nullptr;
                 v.erase(v.begin() + i);
-                G.setfield(x, y, '_', race);
+                G.setfield(_x, _y, '_', race);
                 return;
             }
         }
@@ -66,7 +66,7 @@
                 delete v[i];
                 v[i]=nullptr;
                 v.erase(v.begin() + i);
-                G.setfield(x, y, '_', race);
+                G.setfield(_x, _y, '_', race);
                 return;
             }
         }

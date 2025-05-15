@@ -15,7 +15,7 @@
     void game::showbar() const {
         cout<<bar;
     }
-    void game::setbar(char race, char e_race, int score){
+    void game::setbar(char race, char e_race, int _score){
         string lcolour, rcolour;
         switch(race){
             case 'H': lcolour=string(BLUE); break;
@@ -36,11 +36,11 @@
             case 'O': rcolour=string(GREEN); break;
         }
         bar=lcolour;
-        for(int i=0;i<18+score;i++){
+        for(int i=0;i<18+_score;i++){
             bar+="■";
         }
         bar+=rcolour;
-        for(int i=18+score; i<37; i++){
+        for(int i=18+_score; i<37; i++){
             bar+="■";
         }
         bar+=string(RESET);

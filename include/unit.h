@@ -18,7 +18,7 @@ public:
     friend bool operator<=(const unit& u, int value);
     void setspeed(int newspeed);
     virtual int collision(vector <unit*> v, char player);
-    void movement(game &G, int x, int y, char race, char player, vector <unit*> &v, int i);
+    void movement(game &G, int _x, int _y, char race, char player, vector <unit*> &v, int i);
     [[nodiscard]] int attack(vector <unit*> const& v, char player) const;
     virtual int damage(unit *e_unit);
     virtual ~unit() = 0;

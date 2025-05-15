@@ -23,7 +23,7 @@ public:
      [[nodiscard]] int getscore() const;
     void setscore(int delta);
     void showbar() const;
-    void setbar(char race, char e_race, int score);
+    void setbar(char race, char e_race, int _score);
     void setfield(int x, int y, char Y, char race) ;
     void show() const;
     void game_end(char race, char e_race) const;
