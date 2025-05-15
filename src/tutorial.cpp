@@ -28,7 +28,7 @@ namespace tutor {
                 system(CLEAR);
                 char race='H';
                 char e_race='E';
-                int x;
+                int x=0;
                 char y;
                 vector <unit*> lunits={};
                 vector <unit*> runits={};

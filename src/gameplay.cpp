@@ -2,7 +2,7 @@
 namespace play{
 int gameplay(char race, char e_race) {
         game G;
-        int x;
+        int x=0;
         char y;
         vector <unit*> lunits={};
         vector <unit*> runits={};
