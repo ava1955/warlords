@@ -102,7 +102,7 @@
         }
         return -1;
     }
-    int unit::damage(unit* e_unit){
+    int unit::damage(unit*){
         srand(time(nullptr)+index);
         int rnd = rand() % (max_dmg-min_dmg+1);
         rnd+=min_dmg;
