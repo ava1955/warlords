@@ -154,7 +154,7 @@ namespace tutor {
                                 w[i-1]++;
                             }
                             for (int i=0;i<cdP.size();i++) {
-                                cdP[i]=++P.get_cd()[i];
+                                cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
                             goto skip_left_tutorial;
@@ -162,7 +162,7 @@ namespace tutor {
                         pikeman *lunit = new pikeman(x, 0);
                         lunits.push_back(lunit);
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (y=='S') {
@@ -180,7 +180,7 @@ namespace tutor {
                                 w[i-1]++;
                             }
                             for (int i=0;i<cdP.size();i++) {
-                                cdP[i]=++P.get_cd()[i];
+                                cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
                             goto skip_left_tutorial;
@@ -188,7 +188,7 @@ namespace tutor {
                         swordsman *lunit = new swordsman(x, 0);
                         lunits.push_back(lunit);
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (y=='H') {
@@ -206,7 +206,7 @@ namespace tutor {
                                 w[i-1]++;
                             }
                             for (int i=0;i<cdP.size();i++) {
-                                cdP[i]=++P.get_cd()[i];
+                                cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
                             goto skip_left_tutorial;
@@ -214,7 +214,7 @@ namespace tutor {
                         halberdier *lunit = new halberdier(x, 0);
                         lunits.push_back(lunit);
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (y=='A') {
@@ -232,7 +232,7 @@ namespace tutor {
                                 w[i-1]++;
                             }
                             for (int i=0;i<cdP.size();i++) {
-                                cdP[i]=++P.get_cd()[i];
+                                cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
                             goto skip_left_tutorial;
@@ -240,7 +240,7 @@ namespace tutor {
                         archer *lunit = new archer(x, 0);
                         lunits.push_back(lunit);
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (y=='C') {
@@ -258,7 +258,7 @@ namespace tutor {
                                 w[i-1]++;
                             }
                             for (int i=0;i<cdP.size();i++) {
-                                cdP[i]=++P.get_cd()[i];
+                                cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
                             goto skip_left_tutorial;
@@ -266,7 +266,7 @@ namespace tutor {
                         cavalry *lunit = new cavalry(x, 0);
                         lunits.push_back(lunit);
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (y=='X') {
@@ -274,26 +274,6 @@ namespace tutor {
                             cout<<"Cooldown in effect";
                             goto cooldown_tutorial;
                         }
-                        if (race=='E') {
-                            if (ok==1) {
-                                charged=1;
-                                whirler *lunit=new whirler(1, 0);
-                                lunits.push_back(lunit);
-                                for (int i=2; i<=10; i++) {
-                                    whirler *lunit1=new whirler(lunit, i);
-                                    lunits.push_back(lunit1);
-                                    w[i-1]++;
-                                }
-                                for (int i=0;i<cdP.size();i++) {
-                                    cdP[i]=++P.get_cd()[i];
-                                }
-                                ok=0;
-                                goto skip_left_tutorial;
-                            }
-                            whirler *lunit = new whirler(x, 0);
-                            lunits.push_back(lunit);
-                        }
-                        if (race=='H') {
                             if (ok==1) {
                                 charged=1;
                                 kings_guard *lunit= new kings_guard(1, 0);
@@ -304,16 +284,15 @@ namespace tutor {
                                     w[i-1]++;
                                 }
                                 for (int i=0;i<cdP.size();i++) {
-                                    cdP[i]=++P.get_cd()[i];
+                                    cdP[i]=1+P.get_cd()[i];
                                 }
                                 ok=0;
                                 goto skip_left_tutorial;
                             }
                             kings_guard *lunit = new kings_guard(x, 0);
                             lunits.push_back(lunit);
-                        }
                         for (int i=0;i<cdP.size();i++) {
-                            cdP[i]=++P.get_cd()[i];
+                            cdP[i]=1+P.get_cd()[i];
                         }
                     }
                     if (charged==0) {
@@ -323,9 +302,8 @@ namespace tutor {
                     cout<<endl;
                     skip_left_tutorial:
                     for (int i=0;i<lunits.size();i++) {
-                        int x=(*lunits[i]).getX();
-                        int y=(*lunits[i]).getY();
-                        cout<<x<<":"<<y<<endl;
+                        int _x=(*lunits[i]).getX();
+                        int _y=(*lunits[i]).getY();
                         if (auto poz=(*lunits[i]).attack(runits, 'L'); poz>=0) {
                             *runits[poz]-=lunits[i]->damage(runits[poz]);
                             if (*runits[poz]<=0) {
@@ -339,7 +317,7 @@ namespace tutor {
                         if (auto poz=lunits[i]->collision(runits, 'L'); poz>=0) {
                             continue;
                         }
-                        lunits[i]->movement(Tutorial, x, y, race, 'L', lunits, i);
+                        lunits[i]->movement(Tutorial, _x, _y, race, 'L', lunits, i);
                     }
                     if (unit=='.') unit=O.opponent_unit();
                     if (cdO[string("PSHACX").rfind(unit)]) goto skip_right_tutorial;
@@ -348,7 +326,7 @@ namespace tutor {
                         pikeman *runit = new pikeman(row, 17);
                         runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
@@ -356,7 +334,7 @@ namespace tutor {
                         swordsman *runit = new swordsman(row, 17);
                         runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
@@ -364,7 +342,7 @@ namespace tutor {
                         halberdier *runit = new halberdier(row, 17);
                         runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
@@ -372,7 +350,7 @@ namespace tutor {
                         archer *runit = new archer(row, 17);
                         runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
@@ -380,28 +358,22 @@ namespace tutor {
                         cavalry *runit = new cavalry(row, 17);
                         runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
                     if (unit=='X') {
-                        if (e_race=='E') {
-                            whirler *runit = new whirler(row, 17);
-                            runits.push_back(runit);
-                        }
-                        if (e_race=='H') {
-                            kings_guard *runit = new kings_guard(row, 17);
-                            runits.push_back(runit);
-                        }
+                        whirler *runit = new whirler(row, 17);
+                        runits.push_back(runit);
                         for (int i=0;i<cdO.size();i++) {
-                            cdO[i]=++O.get_cd()[i];
+                            cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
                     skip_right_tutorial:
                     for (int i=0;i<runits.size();i++) {
-                        int x=runits[i]->getX();
-                        int y=runits[i]->getY();
+                        int _x=runits[i]->getX();
+                        int _y=runits[i]->getY();
                         if (auto poz=runits[i]->attack(lunits, 'R'); poz>=0) {
                             *lunits[poz]-=runits[i]->damage(lunits[poz]);
                             if (*lunits[poz]<=0) {
@@ -415,7 +387,7 @@ namespace tutor {
                         if (auto poz=runits[i]->collision(lunits, 'R'); poz>=0) {
                             continue;
                         }
-                        runits[i]->movement(Tutorial, x, y, e_race, 'R', runits, i);
+                        runits[i]->movement(Tutorial, _x, _y, e_race, 'R', runits, i);
                     }
                     for (int i=0; i<cdP.size(); i++) {
                         if (cdP[i]!=0){

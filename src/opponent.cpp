@@ -3,7 +3,7 @@
     opponent::opponent(char race) : player(race) {
         this->race = race;
     }
-    int opponent::opponent_row(vector<int> &w) {
+    int opponent::opponent_row(const vector<int> &w) {
         vector <int> adj;
         int total_weight = 0;
         for (int i : w) {

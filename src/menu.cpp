@@ -29,7 +29,7 @@ bool menu() {
             cin>>e_race;
             e_race=toupper(e_race);
         }
-        int i=play::gameplay(race, e_race);
+        play::gameplay(race, e_race);
         cout<<"Press C to go back to menu\n";
         char c;
         cin>>c;

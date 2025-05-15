@@ -7,7 +7,7 @@ class opponent:public player {
 public:
     explicit opponent(char race);
     [[nodiscard]] bool charge_check() const override;
-    int opponent_row(vector<int> &w);
+    int opponent_row(const vector<int> &w);
     static char opponent_unit();
 };
 #endif

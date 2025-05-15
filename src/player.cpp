@@ -3,17 +3,14 @@
     player::player(char race) {
     this->race=race;
     }
-    char player::getrace() {
-        return race;
-    }
     istream & operator >> (istream &in,  player &P) {
         in>>P.race;
         return in;
     }
     player::~player(){
-        player::max_cds.clear();
+        max_cds.clear();
     }
-    vector <int> player::get_cd() {
+    const vector <int>& player::get_cd() {
         return max_cds;
     }
     void player::set_cd() {
