@@ -718,8 +718,8 @@ int gameplay(char race, char e_race) {
                     cdO[i]--;
                 }
             }
-            sort(lunits.begin(), lunits.end(), [](unit* const x, unit* const y){return x->getHP()<y->getHP();});
-            sort(runits.begin(), runits.end(), [](unit* const x, unit* const y){return x->getHP()<y->getHP();});
+            sort(lunits.begin(), lunits.end(), [](const unit* x, const unit* y){return x->getHP()<y->getHP();});
+            sort(runits.begin(), runits.end(), [](const unit* x, const unit* y){return x->getHP()<y->getHP();});
             G.setturns();
             system(CLEAR);
         }
