@@ -39,11 +39,11 @@
         return *this;
     }
     int halberdier::damage(unit* e_unit) {
-        srand(time(0)+i);
+        srand(time(0)+index);
         int rnd = rand() % (max_dmg-min_dmg+1);
         rnd+=min_dmg;
-        i++;
-        if (i==1000) i=0;
+        index++;
+        if (index==1000) index=0;
         if(dynamic_cast<cavalry*>(e_unit)) return rnd+rnd*3/10;
         return rnd;
     }

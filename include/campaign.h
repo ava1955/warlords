@@ -7,11 +7,11 @@ class campaign {
         string colour;
         string name;
     public:
-        province(string colour, string name);
-        [[nodiscard]] string getcolour() const;
-        [[nodiscard]] string getname() const;
-        void setcolour(string colour);
-        void addcolour(string colour);
+        province(const string& colour, const string& name);
+        [[nodiscard]] const string& getcolour() const;
+        [[nodiscard]] const string& getname() const;
+        void setcolour(const string& colour);
+        void addcolour(const string& colour);
     }Battakka=province(CYAN, "Battakka"),
      Chan=province(MAGENTA, "Chan"),
      Vorth=province(RED, "Vorth"),
@@ -50,13 +50,13 @@ class campaign {
 public:
     ~campaign();
     static campaign& getcampaign();
-    vector <province*> getprovinces();
+    const vector <province*>& getprovinces();
     set <string> getprovinces_attackable();
     void setprovinces(province* prov);
     province* getprovince(char x) ;
     void setbattles();
     [[nodiscard]] int getbattles() const;
-    void province_update(string colour);
+    void province_update(const string& colour);
     void conquest_init(char race);
     void showmap() const;
     void updatemap();

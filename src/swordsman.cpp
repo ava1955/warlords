@@ -21,6 +21,7 @@
         unit::x=x;
         y=(*a).y;
         name=(*a).name;
+        def=a->def;
     }
     swordsman& swordsman::operator=(const swordsman& a) {
         if (this != &a) {
@@ -34,16 +35,17 @@
             x = a.x;
             y = a.y;
             name = a.name;
+            def=a.def;
         }
         return *this;
     }
     swordsman::~swordsman()=default;
 int swordsman::damage(unit* e_unit) {
-    srand(time(0)+i);
+    srand(time(0)+index);
     int rnd = rand() % (max_dmg-min_dmg+1);
     rnd+=min_dmg;
-    i++;
-    if (i==1000) i=0;
+    index++;
+    if (index==1000) index=0;
     if(dynamic_cast<archer*>(e_unit)) return rnd+rnd*1/2;
     if(dynamic_cast<pikeman*>(e_unit)) return rnd+rnd*1/2;
     return rnd;

@@ -9,7 +9,7 @@ string set_colour(char race) {
         case 'D': return string(RED);
         case 'T': return string(CYAN);
         case 'O': return string(GREEN);
-        case default: return "";
+        default: return "";
     }
 }
     int getprovince(char x) {
@@ -35,6 +35,7 @@ string set_colour(char race) {
         case 'D': {
             return 7;
         }
+        default: return 0;
     }
 }
 }

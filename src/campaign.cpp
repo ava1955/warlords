@@ -12,24 +12,24 @@ campaign::~campaign() {
     provinces_conquered.clear();
     dict.clear();
 }
-campaign::province::province(string colour, string name) {
+campaign::province::province(const string& colour, const string& name) {
     this->colour = colour;
     this->name = name;
 }
-[[nodiscard]] string campaign::province::getcolour() const {
+[[nodiscard]] const string& campaign::province::getcolour() const {
     return colour;
 }
-[[nodiscard]] string campaign::province::getname() const {
+[[nodiscard]] const string& campaign::province::getname() const {
     return name;
 }
-void campaign::province::setcolour(string colour) {
+void campaign::province::setcolour(const string&  colour) {
     this->colour = colour;
 }
-void campaign::province::addcolour(string colour) {
+void campaign::province::addcolour(const string&  colour) {
     this->colour = colour+this->colour;
 }
 
-    vector <campaign::province*> campaign::getprovinces() {
+    const vector <campaign::province*>& campaign::getprovinces() {
         return provinces;
     }
     set <string> campaign::getprovinces_attackable() {
@@ -61,6 +61,7 @@ void campaign::province::addcolour(string colour) {
             case 'D': {
                 return &Dead_Plains;
             }
+            default: return nullptr;
         }
     }
     void campaign::setbattles() {
@@ -69,7 +70,7 @@ void campaign::province::addcolour(string colour) {
     [[nodiscard]] int campaign::getbattles() const {
         return battles_won;
     }
-    void campaign::province_update(string colour) {
+    void campaign::province_update(const string& colour) {
         provinces_attackable={};
         for (auto i: provinces_conquered) {
             for (auto j: dict[i]) {

@@ -35,6 +35,7 @@
             x = a.x;
             y = a.y;
             name = a.name;
+            def=a.def;
         }
         return *this;
     }

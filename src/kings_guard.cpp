@@ -21,6 +21,7 @@
         unit::x=x;
         y=(*a).y;
         name=(*a).name;
+        def=a->def;
     }
     kings_guard::~kings_guard() {}
     kings_guard& kings_guard::operator=(const kings_guard& a) {
