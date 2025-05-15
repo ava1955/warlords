@@ -26,6 +26,3 @@
         if(kills!=0 && kills%10==0) return true;
         return false;
     }
-    [[nodiscard]] int player::getkills() const {
-        return kills;
-    }

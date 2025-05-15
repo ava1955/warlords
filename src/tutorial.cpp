@@ -405,5 +405,6 @@ namespace tutor {
             Steve.getpeiculesque();
             cout<<Tutorial;
         }
+        return 0;
     }
 }

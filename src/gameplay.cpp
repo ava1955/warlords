@@ -636,8 +636,8 @@ int gameplay(char race, char e_race) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
-                        goto skip_right;
                         unit_O='.';
+                        goto skip_right;
                     }
                     javelin_thrower *runit = new javelin_thrower(row, 17);
                     runits.push_back(runit);
@@ -658,8 +658,8 @@ int gameplay(char race, char e_race) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
-                        goto skip_right;
                         unit_O='.';
+                        goto skip_right;
                     }
                     flailer *runit = new flailer(row, 17);
                     runits.push_back(runit);
@@ -689,7 +689,6 @@ int gameplay(char race, char e_race) {
                 for (int i=0;i<cdO.size();i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
-                unit_O='.';
             }
             skip_right:
             for (int i=0;i<runits.size();i++) {

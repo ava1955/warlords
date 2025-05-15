@@ -16,6 +16,5 @@ public:
     void set_cd();
     void kill_counter();
     [[nodiscard]] virtual bool charge_check() const;
-    [[nodiscard]] int getkills() const;
 };
 #endif

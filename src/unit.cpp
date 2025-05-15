@@ -20,12 +20,6 @@
     [[nodiscard]] int unit::getHP() const {
         return this->hp;
     }
-    [[nodiscard]] int unit::getmin() const {
-        return this->min_dmg;
-    }
-    [[nodiscard]] int unit::getmax() const {
-        return this->max_dmg;
-    }
     void unit::setspeed(int newspeed) {
         this->mv_speed=newspeed;
     }

@@ -16,8 +16,6 @@ public:
     virtual unit& operator-=(int damage);
     [[nodiscard]] int getHP() const;
     friend bool operator<=(const unit& u, int value);
-    [[nodiscard]] int getmin() const;
-    [[nodiscard]] int getmax() const;
     void setspeed(int newspeed);
     virtual int collision(vector <unit*> v, char player);
     void movement(game &G, int x, int y, char race, char player, vector <unit*> &v, int i);
