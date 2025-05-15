@@ -130,7 +130,7 @@ void campaign::province::addcolour(const string&  colour) {
 
     }
     void campaign::showmap() const {
-        for(int i=0;i<map.size();i++) {
+        for(int i=0;i<static_cast<int>(map.size());i++) {
             cout<<map[i]<<endl;
         }
     }
