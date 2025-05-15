@@ -31,7 +31,7 @@ namespace conq{
             cout<<"You may attack the following provinces:"<<endl;
             int i=0;
             for (auto elem: aux) {
-                if (i==aux.size()-1) {
+                if (i==static_cast<int>(aux.size())-1) {
                     cout<<elem<<endl;
                     break;
                 }
@@ -68,6 +68,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'V': {
                     int _i=gameplay(race, 'D');
@@ -84,6 +85,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'O': {
                     int _i=gameplay(race, 'H');
@@ -100,6 +102,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'C': {
                     int _i=gameplay(race, 'E');
@@ -116,6 +119,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'T': {
                     int _i=gameplay(race, 'O');
@@ -132,6 +136,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'B': {
                     int _i=gameplay(race, 'T');
@@ -148,6 +153,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
                 case 'D': {
                     int _i=gameplay(race, 'U');
@@ -164,6 +170,7 @@ namespace conq{
                         system(CLEAR);
                         break;
                     }
+                    break;
                 }
             }
             C.updatemap();
