@@ -21,7 +21,7 @@
         uniform_int_distribution<> dist(0, total_weight - 1);
         int rnd = dist(gen);
         int cumul = 0;
-        for (int i = 0; i < adj.size(); i++) {
+        for (int i = 0; i < static_cast<int>(adj.size()); i++) {
             cumul += adj[i];
             if (rnd < cumul) return ++i;
         }
