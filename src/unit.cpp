@@ -25,7 +25,7 @@
     }
     int unit::collision(vector <unit*> v, char player) {
         if (player=='R') {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()+2<=this->y-this->mv_speed && v[i]->getY()+1>this->y && v[i]->getX()==this->x) {
                     v[i]->setspeed(1);
                     return -1;
@@ -36,7 +36,7 @@
             }
         }
         else {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()-2<=this->y+this->mv_speed && v[i]->getY()-1>this->y && v[i]->getX()==this->x) {
                     v[i]->setspeed(1);
                     return -1;
@@ -87,14 +87,14 @@
     }
     [[nodiscard]] int unit::attack(vector <unit*> const& v, char player) const {
         if (player=='R') {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()<=this->y-1 && v[i]->getY()>=this->y-range && v[i]->getX()==this->x) {
                     return i;
                 }
             }
         }
         else {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()>=this->y+1 && v[i]->getY()<=this->y+range && v[i]->getX()==this->x) {
                     return i;
                 }

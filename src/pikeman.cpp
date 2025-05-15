@@ -50,7 +50,7 @@
     }
     int pikeman::collision(vector <unit*> v, char player) {
         if (player=='R') {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()+2<=this->y-this->mv_speed-1 && v[i]->getY()+1>this->y && v[i]->getX()==this->x) {
                     this->setspeed(1);
                     v[i]->setspeed(1);
@@ -62,7 +62,7 @@
             }
         }
         else {
-            for (int i=0; i<v.size(); i++) {
+            for (int i=0; i<static_cast<int>(v.size()); i++) {
                 if (v[i]->getY()-2<=this->y+this->mv_speed+1 && v[i]->getY()-1>this->y && v[i]->getX()==this->x) {
                     this->setspeed(1);
                     v[i]->setspeed(1);
