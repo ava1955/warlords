@@ -56,10 +56,10 @@
         else field[x-1][y]=RESET+string(1, '_');
     }
     ostream & operator << (ostream &out, const game &G) {
-        for (int i = 0; i < G.field.size(); i++) {
-            if(i==G.field.size()-1) out<<i+1<<": ";
+        for (int i = 0; i < static_cast<int>(G.field.size()); i++) {
+            if(i==static_cast<int>(G.field.size())-1) out<<i+1<<": ";
             else out<<" "<<i+1<<": ";
-            for (int j = 0; j < G.field[i].size(); j++) {
+            for (int j = 0; j < static_cast<int>(G.field[i].size()); j++) {
                 out << G.field[i][j] << " ";
             }
             out << endl;

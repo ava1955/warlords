@@ -134,7 +134,7 @@ int gameplay(char race, char e_race) {
                         lunits.push_back(lunit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdP.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdP.size());i++) {
                         cdP[i]=1+P.get_cd()[i];
                     }
                     ok=0;
@@ -142,7 +142,7 @@ int gameplay(char race, char e_race) {
                 }
                 pikeman *lunit = new pikeman(x, 0);
                 lunits.push_back(lunit);
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -160,7 +160,7 @@ int gameplay(char race, char e_race) {
                         lunits.push_back(lunit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdP.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdP.size());i++) {
                         cdP[i]=1+P.get_cd()[i];
                     }
                     ok=0;
@@ -168,7 +168,7 @@ int gameplay(char race, char e_race) {
                 }
                 swordsman *lunit = new swordsman(x, 0);
                 lunits.push_back(lunit);
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -186,7 +186,7 @@ int gameplay(char race, char e_race) {
                         lunits.push_back(lunit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdP.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdP.size());i++) {
                         cdP[i]=1+P.get_cd()[i];
                     }
                     ok=0;
@@ -194,7 +194,7 @@ int gameplay(char race, char e_race) {
                 }
                 halberdier *lunit = new halberdier(x, 0);
                 lunits.push_back(lunit);
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -212,7 +212,7 @@ int gameplay(char race, char e_race) {
                         lunits.push_back(lunit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdP.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdP.size());i++) {
                         cdP[i]=1+P.get_cd()[i];
                     }
                     ok=0;
@@ -220,7 +220,7 @@ int gameplay(char race, char e_race) {
                 }
                 archer *lunit = new archer(x, 0);
                 lunits.push_back(lunit);
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -238,7 +238,7 @@ int gameplay(char race, char e_race) {
                         lunits.push_back(lunit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdP.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdP.size());i++) {
                         cdP[i]=1+P.get_cd()[i];
                     }
                     ok=0;
@@ -246,7 +246,7 @@ int gameplay(char race, char e_race) {
                 }
                 cavalry *lunit = new cavalry(x, 0);
                 lunits.push_back(lunit);
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -265,7 +265,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -284,7 +284,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -303,7 +303,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -322,7 +322,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -341,7 +341,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -360,7 +360,7 @@ int gameplay(char race, char e_race) {
                             lunits.push_back(lunit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                         ok=0;
@@ -369,7 +369,7 @@ int gameplay(char race, char e_race) {
                     battle_axeman *lunit = new battle_axeman(x, 0);
                     lunits.push_back(lunit);
                 }
-                for (int i=0;i<cdP.size();i++) {
+                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                     cdP[i]=1+P.get_cd()[i];
                 }
             }
@@ -379,7 +379,7 @@ int gameplay(char race, char e_race) {
             }
             cout<<endl;
             skip_left:
-            for (int i=0;i<lunits.size();i++) {
+            for (int i=0;i<static_cast<int>(lunits.size());i++) {
                 int _x=(*lunits[i]).getX();
                 int _y=(*lunits[i]).getY();
                 if (auto poz=(*lunits[i]).attack(runits, 'L'); poz>=0) {
@@ -413,7 +413,7 @@ int gameplay(char race, char e_race) {
                         runits.push_back(runit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdO.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdO.size());i++) {
                         cdO[i]=1+O.get_cd()[i];
                     }
                     ok2=0;
@@ -422,7 +422,7 @@ int gameplay(char race, char e_race) {
                 }
                 pikeman *runit = new pikeman(row, 17);
                 runits.push_back(runit);
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
                 unit_O='.';
@@ -439,7 +439,7 @@ int gameplay(char race, char e_race) {
                         runits.push_back(runit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdO.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdO.size());i++) {
                         cdO[i]=1+O.get_cd()[i];
                     }
                     ok2=0;
@@ -448,7 +448,7 @@ int gameplay(char race, char e_race) {
                 }
                 swordsman *runit = new swordsman(row, 17);
                 runits.push_back(runit);
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
                 unit_O='.';
@@ -465,7 +465,7 @@ int gameplay(char race, char e_race) {
                         runits.push_back(runit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdO.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdO.size());i++) {
                         cdO[i]=1+O.get_cd()[i];
                     }
                     ok2=0;
@@ -474,7 +474,7 @@ int gameplay(char race, char e_race) {
                 }
                 halberdier *runit = new halberdier(row, 17);
                 runits.push_back(runit);
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
                 unit_O='.';
@@ -491,7 +491,7 @@ int gameplay(char race, char e_race) {
                         runits.push_back(runit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdO.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdO.size());i++) {
                         cdO[i]=1+O.get_cd()[i];
                     }
                     ok2=0;
@@ -500,7 +500,7 @@ int gameplay(char race, char e_race) {
                 }
                 archer *runit = new archer(row, 17);
                 runits.push_back(runit);
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
                 unit_O='.';
@@ -517,7 +517,7 @@ int gameplay(char race, char e_race) {
                         runits.push_back(runit1);
                         w[i-1]++;
                     }
-                    for (int i=0;i<cdO.size();i++) {
+                    for (int i=0;i<static_cast<int>(cdO.size());i++) {
                         cdO[i]=1+O.get_cd()[i];
                     }
                     ok2=0;
@@ -526,7 +526,7 @@ int gameplay(char race, char e_race) {
                 }
                 cavalry *runit = new cavalry(row, 17);
                 runits.push_back(runit);
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
                 unit_O='.';
@@ -544,7 +544,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -566,7 +566,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -588,7 +588,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -610,7 +610,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -632,7 +632,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -654,7 +654,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -676,7 +676,7 @@ int gameplay(char race, char e_race) {
                             runits.push_back(runit1);
                             w[i-1]++;
                         }
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         ok2=0;
@@ -686,12 +686,12 @@ int gameplay(char race, char e_race) {
                     spearmaster *runit = new spearmaster(row, 17);
                     runits.push_back(runit);
                 }
-                for (int i=0;i<cdO.size();i++) {
+                for (int i=0;i<static_cast<int>(cdO.size());i++) {
                     cdO[i]=1+O.get_cd()[i];
                 }
             }
             skip_right:
-            for (int i=0;i<runits.size();i++) {
+            for (int i=0;i<static_cast<int>(runits.size());i++) {
                 int _x=runits[i]->getX();
                 int _y=runits[i]->getY();
                 if (auto poz=runits[i]->attack(lunits, 'R'); poz>=0) {
@@ -709,7 +709,7 @@ int gameplay(char race, char e_race) {
                 }
                 runits[i]->movement(G, _x, _y, e_race, 'R', runits, i);
             }
-            for (int i=0; i<cdP.size(); i++) {
+            for (int i=0; i<static_cast<int>(cdP.size()); i++) {
                 if (cdP[i]!=0){
                     cdP[i]--;
                 }

@@ -153,7 +153,7 @@ namespace tutor {
                                 lunits.push_back(lunit1);
                                 w[i-1]++;
                             }
-                            for (int i=0;i<cdP.size();i++) {
+                            for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                 cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
@@ -161,7 +161,7 @@ namespace tutor {
                         }
                         pikeman *lunit = new pikeman(x, 0);
                         lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -179,7 +179,7 @@ namespace tutor {
                                 lunits.push_back(lunit1);
                                 w[i-1]++;
                             }
-                            for (int i=0;i<cdP.size();i++) {
+                            for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                 cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
@@ -187,7 +187,7 @@ namespace tutor {
                         }
                         swordsman *lunit = new swordsman(x, 0);
                         lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -205,7 +205,7 @@ namespace tutor {
                                 lunits.push_back(lunit1);
                                 w[i-1]++;
                             }
-                            for (int i=0;i<cdP.size();i++) {
+                            for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                 cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
@@ -213,7 +213,7 @@ namespace tutor {
                         }
                         halberdier *lunit = new halberdier(x, 0);
                         lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -231,7 +231,7 @@ namespace tutor {
                                 lunits.push_back(lunit1);
                                 w[i-1]++;
                             }
-                            for (int i=0;i<cdP.size();i++) {
+                            for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                 cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
@@ -239,7 +239,7 @@ namespace tutor {
                         }
                         archer *lunit = new archer(x, 0);
                         lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -257,7 +257,7 @@ namespace tutor {
                                 lunits.push_back(lunit1);
                                 w[i-1]++;
                             }
-                            for (int i=0;i<cdP.size();i++) {
+                            for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                 cdP[i]=1+P.get_cd()[i];
                             }
                             ok=0;
@@ -265,7 +265,7 @@ namespace tutor {
                         }
                         cavalry *lunit = new cavalry(x, 0);
                         lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -283,7 +283,7 @@ namespace tutor {
                                     lunits.push_back(lunit1);
                                     w[i-1]++;
                                 }
-                                for (int i=0;i<cdP.size();i++) {
+                                for (int i=0;i<static_cast<int>(cdP.size());i++) {
                                     cdP[i]=1+P.get_cd()[i];
                                 }
                                 ok=0;
@@ -291,7 +291,7 @@ namespace tutor {
                             }
                             kings_guard *lunit = new kings_guard(x, 0);
                             lunits.push_back(lunit);
-                        for (int i=0;i<cdP.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdP.size());i++) {
                             cdP[i]=1+P.get_cd()[i];
                         }
                     }
@@ -301,7 +301,7 @@ namespace tutor {
                     }
                     cout<<endl;
                     skip_left_tutorial:
-                    for (int i=0;i<lunits.size();i++) {
+                    for (int i=0;i<static_cast<int>(lunits.size());i++) {
                         int _x=(*lunits[i]).getX();
                         int _y=(*lunits[i]).getY();
                         if (auto poz=(*lunits[i]).attack(runits, 'L'); poz>=0) {
@@ -325,7 +325,7 @@ namespace tutor {
                     if (unit=='P') {
                         pikeman *runit = new pikeman(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
@@ -333,7 +333,7 @@ namespace tutor {
                     if (unit=='S') {
                         swordsman *runit = new swordsman(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
@@ -341,7 +341,7 @@ namespace tutor {
                     if (unit=='H') {
                         halberdier *runit = new halberdier(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
@@ -349,7 +349,7 @@ namespace tutor {
                     if (unit=='A') {
                         archer *runit = new archer(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
@@ -357,7 +357,7 @@ namespace tutor {
                     if (unit=='C') {
                         cavalry *runit = new cavalry(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
@@ -365,13 +365,13 @@ namespace tutor {
                     if (unit=='X') {
                         whirler *runit = new whirler(row, 17);
                         runits.push_back(runit);
-                        for (int i=0;i<cdO.size();i++) {
+                        for (int i=0;i<static_cast<int>(cdO.size());i++) {
                             cdO[i]=1+O.get_cd()[i];
                         }
                         unit='.';
                     }
                     skip_right_tutorial:
-                    for (int i=0;i<runits.size();i++) {
+                    for (int i=0;i<static_cast<int>(runits.size());i++) {
                         int _x=runits[i]->getX();
                         int _y=runits[i]->getY();
                         if (auto poz=runits[i]->attack(lunits, 'R'); poz>=0) {
@@ -389,7 +389,7 @@ namespace tutor {
                         }
                         runits[i]->movement(Tutorial, _x, _y, e_race, 'R', runits, i);
                     }
-                    for (int i=0; i<cdP.size(); i++) {
+                    for (int i=0; i<static_cast<int>(cdP.size()); i++) {
                         if (cdP[i]!=0){
                             cdP[i]--;
                         }
