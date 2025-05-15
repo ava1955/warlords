@@ -109,11 +109,11 @@
         return -1;
     }
     int unit::damage(unit* e_unit){
-        srand(time(nullptr)+i);
+        srand(time(nullptr)+index);
         int rnd = rand() % (max_dmg-min_dmg+1);
         rnd+=min_dmg;
-        i++;
-        if (i==1000) i=0;
+        index++;
+        if (index==1000) index=0;
         return rnd;
     }
     bool operator<=(const unit& u, int value) {

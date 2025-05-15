@@ -4,7 +4,7 @@
 #define UNIT_H
 class unit {
 protected:
-    int i=0;
+    int index=0;
     char name='\0';
     int min_dmg=0, max_dmg=0, mv_speed=0, hp=0, range=0, cd=0, x=0, y=0, max_speed=0;
 public:
@@ -12,7 +12,7 @@ public:
     unit(int x, int y);
     [[nodiscard]] int getX() const;
     [[nodiscard]] int getY() const;
-    void setX(int i);
+    void setX(int index);
     virtual unit& operator-=(int damage);
     [[nodiscard]] int getHP() const;
     friend bool operator<=(const unit& u, int value);

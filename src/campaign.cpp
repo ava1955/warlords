@@ -1,4 +1,4 @@
-#include "aux.h"
+#include "auxiliary.h"
 #include "campaign.h"
 campaign::campaign(){}
 campaign& campaign::getcampaign() {

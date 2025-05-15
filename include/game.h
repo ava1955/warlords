@@ -1,4 +1,4 @@
-#include "aux.h"
+#include "auxiliary.h"
 #ifndef GAME_H
 #define GAME_H
     class game{
