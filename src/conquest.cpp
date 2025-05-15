@@ -29,14 +29,14 @@ namespace conq{
         while (C.getbattles()<6) {
             set <string> aux=C.getprovinces_attackable();
             cout<<"You may attack the following provinces:"<<endl;
-            int _i=0;
+            int i=0;
             for (auto elem: aux) {
-                if (_i==aux.size()-1) {
+                if (i==aux.size()-1) {
                     cout<<elem<<endl;
                     break;
                 }
                 cout<<elem<<", ";
-                _i++;
+                i++;
             }
             string province;
             getline(cin, province);
