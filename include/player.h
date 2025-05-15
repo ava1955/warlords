@@ -1,4 +1,4 @@
-#include "aux.h"
+#include "auxiliary.h"
 #ifndef PLAYER_H
 #define PLAYER_H
 class player {
@@ -8,7 +8,7 @@ protected:
     int kills=0;
 public:
     player();
-    player(char race);
+    explicit player(char race);
     char getrace();
     friend istream & operator >> (istream &in,  player &P);
     ~player();

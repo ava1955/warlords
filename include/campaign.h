@@ -1,4 +1,4 @@
-#include "aux.h"
+#include "auxiliary.h"
 #ifndef CAMPAIGN_H
 #define CAMPAIGN_H
 class campaign {

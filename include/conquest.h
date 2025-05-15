@@ -1,4 +1,4 @@
-#include "aux.h"
+#include "auxiliary.h"
 #include "campaign.h"
 #include "game.h"
 #include "player.h"
