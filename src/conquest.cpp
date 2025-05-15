@@ -29,14 +29,14 @@ namespace conq{
         while (C.getbattles()<6) {
             set <string> aux=C.getprovinces_attackable();
             cout<<"You may attack the following provinces:"<<endl;
-            int i=0;
+            int _i=0;
             for (auto elem: aux) {
-                if (i==aux.size()-1) {
+                if (_i==aux.size()-1) {
                     cout<<elem<<endl;
                     break;
                 }
                 cout<<elem<<", ";
-                i++;
+                _i++;
             }
             string province;
             getline(cin, province);
@@ -54,8 +54,8 @@ namespace conq{
             }
             switch (province[0]) {
                 case 'S': {
-                    int i=gameplay(race, 'M');
-                    if (i==1) {
+                    int _i=gameplay(race, 'M');
+                    if (_i==1) {
                         C.setbattles();
                         auto Senshan = C.getprovince('S');
                         Senshan->setcolour(string(colour)+UNDERLINE);
@@ -70,8 +70,8 @@ namespace conq{
                     }
                 }
                 case 'V': {
-                    int i=gameplay(race, 'D');
-                    if (i==1) {
+                    int _i=gameplay(race, 'D');
+                    if (_i==1) {
                         C.setbattles();
                         auto Vorth = C.getprovince('V');
                         Vorth->setcolour(string(colour)+UNDERLINE);
@@ -86,8 +86,8 @@ namespace conq{
                     }
                 }
                 case 'O': {
-                    int i=gameplay(race, 'H');
-                    if (i==1) {
+                    int _i=gameplay(race, 'H');
+                    if (_i==1) {
                         C.setbattles();
                         auto Orthshire = C.getprovince('O');
                         Orthshire->setcolour(string(colour)+UNDERLINE);
@@ -102,8 +102,8 @@ namespace conq{
                     }
                 }
                 case 'C': {
-                    int i=gameplay(race, 'E');
-                    if (i==1) {
+                    int _i=gameplay(race, 'E');
+                    if (_i==1) {
                         C.setbattles();
                         auto Chan = C.getprovince('C');
                         Chan->setcolour(string(colour)+UNDERLINE);
@@ -118,8 +118,8 @@ namespace conq{
                     }
                 }
                 case 'T': {
-                    int i=gameplay(race, 'O');
-                    if (i==1) {
+                    int _i=gameplay(race, 'O');
+                    if (_i==1) {
                         C.setbattles();
                         auto Thareth = C.getprovince('T');
                         Thareth->setcolour(string(colour)+UNDERLINE);
@@ -134,8 +134,8 @@ namespace conq{
                     }
                 }
                 case 'B': {
-                    int i=gameplay(race, 'T');
-                    if (i==1) {
+                    int _i=gameplay(race, 'T');
+                    if (_i==1) {
                         C.setbattles();
                         auto Battakka = C.getprovince('B');
                         Battakka->setcolour(string(colour)+UNDERLINE);
@@ -150,8 +150,8 @@ namespace conq{
                     }
                 }
                 case 'D': {
-                    int i=gameplay(race, 'U');
-                    if (i==1) {
+                    int _i=gameplay(race, 'U');
+                    if (_i==1) {
                         C.setbattles();
                         auto Dead_Plains = C.getprovince('D');
                         Dead_Plains->setcolour(string(colour)+UNDERLINE);

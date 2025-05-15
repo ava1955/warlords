@@ -35,6 +35,7 @@ int gameplay(char race, char e_race) {
                         case 'O': cout<<'B'; break;
                         case 'T': cout<<'T'; break;
                         case 'U': cout<<'F'; break;
+                        default: break;
                     }
                 }
                 else cout<<i<<" ";
@@ -50,6 +51,7 @@ int gameplay(char race, char e_race) {
                         case 'T': cout<<'T'; break;
                         case 'U': cout<<'F'; break;
                         case 'D': cout<<'M'; break;
+                        default: break;
                     }
                 }
                 else cout<<i<<" ";
@@ -378,8 +380,8 @@ int gameplay(char race, char e_race) {
             cout<<endl;
             skip_left:
             for (int i=0;i<lunits.size();i++) {
-                int x=(*lunits[i]).getX();
-                int y=(*lunits[i]).getY();
+                int _x=(*lunits[i]).getX();
+                int _y=(*lunits[i]).getY();
                 if (auto poz=(*lunits[i]).attack(runits, 'L'); poz>=0) {
                     *runits[poz]-=lunits[i]->damage(runits[poz]);
                     if (*runits[poz]<=0) {
@@ -393,7 +395,7 @@ int gameplay(char race, char e_race) {
                 if (auto poz=lunits[i]->collision(runits, 'L'); poz>=0) {
                     continue;
                 }
-                lunits[i]->movement(G, x, y, race, 'L', lunits, i);
+                lunits[i]->movement(G, _x, _y, race, 'L', lunits, i);
             }
             if (unit_O=='.') unit_O=O.opponent_unit();
             if (cdO[string("PSHACX").rfind(unit_O)]) goto skip_right;
@@ -691,8 +693,8 @@ int gameplay(char race, char e_race) {
             }
             skip_right:
             for (int i=0;i<runits.size();i++) {
-                int x=runits[i]->getX();
-                int y=runits[i]->getY();
+                int _x=runits[i]->getX();
+                int _y=runits[i]->getY();
                 if (auto poz=runits[i]->attack(lunits, 'R'); poz>=0) {
                     *lunits[poz]-=runits[i]->damage(lunits[poz]);
                     if (*lunits[poz]<=0) {
@@ -706,7 +708,7 @@ int gameplay(char race, char e_race) {
                 if (auto poz=runits[i]->collision(lunits, 'R'); poz>=0) {
                     continue;
                 }
-                runits[i]->movement(G, x, y, e_race, 'R', runits, i);
+                runits[i]->movement(G, _x, _y, e_race, 'R', runits, i);
             }
             for (int i=0; i<cdP.size(); i++) {
                 if (cdP[i]!=0){
@@ -716,10 +718,11 @@ int gameplay(char race, char e_race) {
                     cdO[i]--;
                 }
             }
-            sort(lunits.begin(), lunits.end(), [](unit* x, unit* y){return x->getHP()<y->getHP();});
-            sort(runits.begin(), runits.end(), [](unit* x, unit* y){return x->getHP()<y->getHP();});
+            sort(lunits.begin(), lunits.end(), [](unit* const x, unit* const y){return x->getHP()<y->getHP();});
+            sort(runits.begin(), runits.end(), [](unit* const x, unit* const y){return x->getHP()<y->getHP();});
             G.setturns();
             system(CLEAR);
         }
+        return 0;
     }
 }
