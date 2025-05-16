@@ -46,8 +46,7 @@ int swordsman::damage(unit* e_unit) {
     rnd+=min_dmg;
     index++;
     if (index==1000) index=0;
-    if(dynamic_cast<archer*>(e_unit)) return rnd+rnd*1/2;
-    if(dynamic_cast<pikeman*>(e_unit)) return rnd+rnd*1/2;
+    if(dynamic_cast<archer*>(e_unit) || dynamic_cast<pikeman*>(e_unit)) return rnd+rnd*1/2;
     return rnd;
 }
 unit& swordsman::operator-=(int damage) {

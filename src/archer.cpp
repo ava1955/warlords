@@ -44,7 +44,6 @@
         rnd+=min_dmg;
         index++;
         if (index==1000) index=0;
-        if(dynamic_cast<halberdier*>(e_unit)) return rnd+rnd*3/10;
-        if(dynamic_cast<giant_troll*>(e_unit)) return rnd+rnd*3/10;
+        if(dynamic_cast<halberdier*>(e_unit) || dynamic_cast<giant_troll*>(e_unit)) return rnd+rnd*3/10;
         return rnd;
     }

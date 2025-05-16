@@ -44,8 +44,7 @@
         rnd+=min_dmg;
         index++;
         if (index==1000) index=0;
-        if(dynamic_cast<archer*>(e_unit)) return rnd+rnd*3/10;
-        if(dynamic_cast<halberdier*>(e_unit)) return rnd+rnd*3/10;
+        if(dynamic_cast<archer*>(e_unit) || dynamic_cast<halberdier*>(e_unit)) return rnd+rnd*3/10;
         return rnd;
     }
     int pikeman::collision(vector <unit*> v, char player) {
